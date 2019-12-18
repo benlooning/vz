@@ -33,7 +33,6 @@ def get_getswitch_list (session_id):
     try:
         resp = requests.get(fritzbox_url + path_avm_aha + "?switchcmd=getswitchlist" + "&sid=" + session_id)
         print (fritzbox_url + path_avm_aha + "?switchcmd=getswitchlist" + "&sid=" + session_id)
-        #?ain=012340000123&switchcmd=setswitchon&sid=9c977765016899f8
         if resp.status_code != 200:
             # This means something went wrong.
             resp.raise_for_status()
